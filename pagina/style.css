@@ -1,0 +1,189 @@
+    style.css
+    html {
+    scroll-behavior: smooth;
+}
+
+/* ======== ESTILO GERAL ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #333;
+    background: url("img1.png") no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;   
+}
+
+/* Overlay de fundo sutil para facilitar a leitura */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    z-index: -1;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    background: rgba(0, 77, 153, 0.9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* ======== NAVEGAÇÃO ======== */
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ======== CONTEÚDO ======== */
+main {
+    padding: 30px 20px;
+}
+
+/* Cada seção */
+.secao {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    scroll-margin-top: 140px; /* ajuste perfeito para o seu header */
+}
+
+/* Títulos */
+h2 {
+    color: #004d99;
+    margin-bottom: 15px;
+    border-left: 5px solid #004d99;
+    padding-left: 10px;
+}
+
+h3 {
+    color: #0066cc;
+    margin-top: 20px;
+}
+
+/* Listas */
+ul {
+    margin: 10px 0 10px 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ======== DESTAQUES ======== */
+.destaques {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.destaques a {
+    background: #004d99;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.destaques a:hover {
+    background: #0073e6;
+    transform: scale(1.05);
+}
+
+/* ======== TABELA COMPARATIVA ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #004d99;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background: #004d99;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .destaques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secao {
+        padding: 20px;
+        
+    }
+}
